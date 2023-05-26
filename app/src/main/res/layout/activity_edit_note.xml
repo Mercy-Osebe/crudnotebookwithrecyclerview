@@ -10,7 +10,7 @@
 
 
     <EditText
-        android:id="@+id/titleNote"
+        android:id="@+id/titleNoteEditText"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -22,7 +22,7 @@
         android:autofillHints="" />
 
     <EditText
-        android:id="@+id/descNote"
+        android:id="@+id/descNoteEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"

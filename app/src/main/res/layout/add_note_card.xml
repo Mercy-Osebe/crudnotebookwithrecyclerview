@@ -5,13 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="180dp"
     android:orientation="vertical">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/noteCard"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardBackgroundColor="@color/yellow"
         android:layout_marginBottom="10dp"
-       >
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        app:cardBackgroundColor="@color/yellow">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -25,13 +29,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/noteCardImage"
                     android:layout_width="80dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/me"
                     android:layout_weight="0.3"
-                    app:civ_border_width="2dp"/>
+                    android:src="@drawable/me"
+                    app:civ_border_width="2dp" />
 
                 <TextView
                     android:id="@+id/title"
@@ -39,21 +44,21 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.7"
                     android:gravity="center"
+                    android:text="Title:"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:text="Title:" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
             <TextView
-                android:padding="5px"
                 android:id="@+id/desc"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:gravity="left"
+                android:padding="5px"
+                android:text="Desc:"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:text="Desc:"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
