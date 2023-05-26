@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         notesRecyclerView.adapter=CustomNoteAdapter(titleArray,descArray,imageArray,this)
 
         getResponseDataFromAddNoteActivity()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

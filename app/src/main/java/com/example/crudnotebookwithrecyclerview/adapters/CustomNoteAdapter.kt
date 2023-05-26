@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.crudnotebookwithrecyclerview.R
 import de.hdodenhof.circleimageview.CircleImageView
@@ -23,6 +24,13 @@ class CustomNoteAdapter(var titleArray: ArrayList<String>,
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotesViewHolder {
         //calls the card view design to be used in the view
         val view:View= LayoutInflater.from(parent.context).inflate(R.layout.add_note_card,parent,false)
+        view.setOnClickListener {
+            println( "item clicked")
+        }
+        view.setOnLongClickListener {
+            println("item long pressed")
+            true
+        }
         return NotesViewHolder(view)
     }
 
